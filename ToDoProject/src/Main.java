@@ -21,13 +21,30 @@ public class Main {
 
 //        System.out.println(products);
 //        System.out.println(tags);
+//
+//        List<Integer> list = new ArrayList<>();
+//        list.add(1);
+//        list.add(4);
+//        list.add(4);
+//        TagService tagservice = new TagService(products,tags);
+//        tagservice.addTag(3, list);
+//
+//       System.out.println(products);
 
-        List<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(4);
-        TagService tagservice = new TagService(products,tags);
-        tagservice.addTag(3, list);
 
-       System.out.println(products);
+       List<User> userList = new ArrayList<>();
+       userList.add(new User(1,"Harshal"));
+       userList.add(new User(2, "Venktesh"));
+       userList.add(new User(3,"Bhavesh"));
+
+
+       CartService cart = new CartService(userList,products);
+
+        List<Integer> productlist = new ArrayList<>();
+        productlist.add(1);
+
+       cart.addCart(2,productlist);
+
+        System.out.println(userList);
     }
 }

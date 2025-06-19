@@ -5,7 +5,7 @@ public class Product {
     private int id;
     private String productName;
     private List<Tags> listTags;
-
+    private int amount;
 
     public Product(int id, String productName, List<Tags> listTags) {
         this.id = id;
@@ -37,14 +37,21 @@ public class Product {
         this.listTags = listTags;
     }
 
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
                 "id=" + id +
                 ", productName='" + productName + '\'' +
                 ", listTags=" + listTags +
+                ", amount=" + amount +
                 '}';
     }
-
-
 }
