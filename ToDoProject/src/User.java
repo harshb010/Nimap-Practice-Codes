@@ -3,7 +3,7 @@ import java.util.List;
 public class User {
     private int id;
     private String name;
-    private List<Product> productList;
+    private Cart cart;
 
     public User(int id, String name) {
         this.id = id;
@@ -27,12 +27,12 @@ public class User {
         this.name = name;
     }
 
-    public List<Product> getProductList() {
-        return productList;
+    public Cart getCart() {
+        return cart;
     }
 
-    public void setProductList(List<Product> productList) {
-        this.productList = productList;
+    public void setCart(Cart cart) {
+        this.cart = cart;
     }
 
     @Override
@@ -40,7 +40,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", productList=" + productList +
+                ", cart=" + cart +
                 '}';
     }
 }

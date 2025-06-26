@@ -1,12 +1,12 @@
+import java.util.List;
+
 public class Cart {
     private double price;
-    private Product product;
-    private int userId;
+    private int quantity;
+    private Product productList;
 
-    public Cart(double price, Product product, int userId) {
-        this.price = price;
-        this.product = product;
-        this.userId = userId;
+    public Cart() {
+
     }
 
     public double getPrice() {
@@ -17,28 +17,28 @@ public class Cart {
         this.price = price;
     }
 
-    public Product getProduct() {
-        return product;
+    public Product getProductList() {
+        return productList;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public void setProductList(Product productList) {
+        this.productList = productList;
     }
 
-    public int getUserId() {
-        return userId;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     @Override
     public String toString() {
         return "Cart{" +
-                "price=" + price +
-                ", product=" + product +
-                ", userId=" + userId +
+                " product=" + productList+
+                ", quantity=" + quantity +
+                  ", price=" + price +
                 '}';
     }
 }

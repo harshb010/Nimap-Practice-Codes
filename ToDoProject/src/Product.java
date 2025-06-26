@@ -6,11 +6,16 @@ public class Product {
     private String productName;
     private List<Tags> listTags;
     private int amount;
+    private int quantity;
 
-    public Product(int id, String productName, List<Tags> listTags) {
+    public Product(int id, String productName) {
         this.id = id;
         this.productName = productName;
-        this.listTags = listTags;
+
+    }
+
+    public Product() {
+
     }
 
     public int getId() {
@@ -45,13 +50,19 @@ public class Product {
         this.amount = amount;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
                 "id=" + id +
                 ", productName='" + productName + '\'' +
-                ", listTags=" + listTags +
-                ", amount=" + amount +
                 '}';
     }
 }
